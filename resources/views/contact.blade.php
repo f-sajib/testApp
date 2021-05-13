@@ -3,7 +3,7 @@
 <head>
 	<title>Contact Us</title>
 	<meta charset="UTF-8">
-    
+
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/main/bootstrap/css/bootstrap.min.css') }}">
@@ -29,7 +29,7 @@
 		<strong>
 		   {{ session('message') }}
 		</strong>
-			
+
 		</div>
 	@endif
 	<div class="contact1">
@@ -37,7 +37,7 @@
 			<div class="contact1-pic js-tilt" data-tilt>
 				<img src="../assets/images/img-01.png" alt="mail">
 			</div>
-
+{{--            <img src="{{$hospital->logo}}">--}}
 			<form action="{{ route('mail.send') }}" class="contact1-form validate-form" method="POST">
 				<span class="contact1-form-title">
 					Get in touch
