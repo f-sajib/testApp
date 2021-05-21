@@ -20,7 +20,7 @@ class CreateHospitalsTable extends Migration
             $table->string('slug')->unique();
             $table->string('email');
             $table->string('phone');
-            $table->string('website');
+            $table->string('domain');
             $table->date('establishment_date');
             $table->longText('description');
             $table->string('address',255);

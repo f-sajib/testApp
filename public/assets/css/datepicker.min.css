@@ -309,7 +309,8 @@
 
 .datepicker .datepicker-switch, .datepicker .next, .datepicker .prev, .datepicker tfoot tr th {
     cursor: pointer;
-    background-color: pink;
+    background-color: darkcyan;
+    color: white;
 }
 
 .datepicker .datepicker-switch:hover, .datepicker .next:hover, .datepicker .prev:hover, .datepicker tfoot tr th:hover {

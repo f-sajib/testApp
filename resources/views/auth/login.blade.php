@@ -7,11 +7,11 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="left-side col-md-6">
                 <div class=" bg-transparent p-4 mt-5 rounded login-image">
                     <img src="{{asset('assets/images/login.svg')}}">
                     <span class="d-flex justify-content-center"
-                        style="font-weight:bolder; color: deeppink">We aim to make your life better
+                        style="font-weight:bolder; font-size: 20px; color: darkcyan">We aim to make your life better
                     </span>
                 </div>
 
@@ -37,41 +37,48 @@
                             </div>
                         </div>
                     @endif
-                    <div style="height:500px;max-height: 500px" class="shadow-lg p-4 mt-5  bg-white rounded">
 
-                        <h5 class="d-flex justify-content-center">Login</h5>
-                        <span class="d-flex justify-content-center">Welcome To &nbsp; <b>{{$hospital->name}}</b></span>
-                        <div class="mt-3 d-flex justify-content-center">
-                            @if($hospital->logo)
-                                <img style="height: auto;width: 20%" src="{{$hospital->logo}}">
-                            @else
-                                <img style="height: auto;width: 20%" src="{{asset('assets/images/hospital.png')}}">
-                            @endif
+                    <div
+                        class="login-form card shadow-lg p-4 m-t-50 bg-whitesmoke">
+
+                        <div class="login-logo d-flex justify-content-end">
+{{--                            @if($hospital->logo)--}}
+{{--                                <img class="img-fluid mx-auto d-block shadow-lg" src="{{$hospital->logo}}">--}}
+{{--                            @else--}}
+                                <img class="img-fluid mx-auto dis-block" src="{{asset('assets/images/hospital.png')}}">
+{{--                            @endif--}}
                         </div>
-                        <form method="POST" action="{{route('user.login')}}">
-                            @csrf
-                            <div class="login-input">
-                                <input
-                                    type="email"
-                                    name="email"
-                                    required
-                                    value="{{old('email')}}"
-                                    class="form-control p-3 m-2"
-                                    placeholder="Email">
-                            </div>
-                            <div class="login-input">
-                                <input
-                                    type="password"
-                                    name="password"
-                                    required
-                                    class="form-control p-3 m-2"
-                                    placeholder="Password">
-                            </div>
+                        <div class="card-body login-box">
+                            <span class="m-t-50 d-flex justify-content-center">Welcome To &nbsp; <b class="text-capitalize">{{$hospital->name}}</b></span>
+                            <form method="POST" action="{{route('user.login')}}">
+                                @csrf
+                                <div class="login-input">
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        required
+                                        value="{{old('email')}}"
+                                        class="form-control p-3 m-2">
+                                    <div class="m-2 underline"></div>
+                                    <label class="p-3 m-2 label-1">Email</label>
+                                </div>
+                                <div class="login-input">
+                                    <input
+                                        type="password"
+                                        name="password"
+                                        required
+                                        class="form-control p-3 m-2">
+                                    <div class="m-2 underline-2"></div>
+                                    <label class="p-3 m-2 label-2">Password</label>
+                                </div>
 
                                 <button type="submit"
-                                        class="btn mt-4 btn-pink">Login</button>
+                                        class="mt-4 btn login-button">Login</button>
 
-                        </form>
+                            </form>
+                        </div>
+{{--                        <h5 style="margin-top:100px" class="d-flex justify-content-center">Login</h5>--}}
+
 
                     </div>
                 </div>

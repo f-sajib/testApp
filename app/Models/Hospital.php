@@ -24,7 +24,7 @@ class Hospital extends Model
 
     public function getLogoAttribute($data)
     {
-        return $data ? asset($data) : null;
+        return $data ? \Illuminate\Support\Facades\Storage::url($data) : null;
     }
 
     /**

@@ -14,5 +14,6 @@
 <link rel="stylesheet" href="{{ asset('/assets/css/mdb.min.css') }}">
 <link rel="stylesheet" href="{{ asset('/assets/css/style.css') }}">
 <link href="{{ asset('assets/css/iziToast.css') }}" rel="stylesheet">
+<link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet" />
 
 @stack('styles')

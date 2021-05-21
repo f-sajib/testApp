@@ -7,13 +7,14 @@ use App\Models\Hospital;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
-    public function login($slug)
+    public function login($domain)
     {
-        $hospital = Hospital::query()->where('slug',trim($slug))->firstOrFail();
+        $hospital = Hospital::query()->where('domain',trim($domain))->firstOrFail();
 
         $icon = $hospital && $hospital->logo ? $hospital->logo : asset('assets/images/hospital.png');
         return view('auth.login', compact('hospital','icon'));
@@ -38,11 +39,16 @@ class AuthController extends Controller
                 ->back()
                 ->withInput($request->all());
         }
-        notify()->success("Successfully Loged In","Success","topRight");
 
-        return redirect()->back();
+        Auth::guard('web')->login($userModel);
+        return view('dashboard.admin');
+    }
 
-//        Auth::guard('web')->login($userModel);
-//        return redirect()->route('popo');
+    public function logOut()
+    {
+        $hospital = auth()->user()->hospital->domain;
+        Auth::guard('web')->logout();
+
+        return redirect(url($hospital.'/login'));
     }
 }

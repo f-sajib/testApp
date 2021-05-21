@@ -27,11 +27,11 @@ class CreateHospitalRequest extends FormRequest
             "name"          => "required",
             "email"         => "required|email",
             "phone"         => "required",
-            "website"       => "required",
+            "domain"       => "required|unique:hospitals,domain",
             "establishment_date"    => "required",
             "description"   => "required",
             "address"       => "required",
-            "logo"          => "sometimes|image|mimes:jpg,jpeg,png,gif",
+            "logo"          => "sometimes",
             "social"        => 'sometimes|array',
             "user"          => 'required|array',
             "user.name"     => 'required',
@@ -44,9 +44,10 @@ class CreateHospitalRequest extends FormRequest
     {
         return [
             'user.password.confirmed' => 'Password Confirmation Does Not match',
-            'user.password.min' => 'Password must be at least 6 characters',
-            'user.name.required' => 'User Name is Required',
-            'user.email.unique' => 'User Email Already been Taken',
+            'user.password.min' => 'Password Must Be At Least 6 Characters',
+            'user.name.required' => 'User Name Is Required',
+            'user.email.unique' => 'User Email Already Been Taken',
+            'domain.unique' => 'Domain Name Is Already Been taken'
         ];
     }
 }

@@ -22,7 +22,7 @@ class HospitalController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * create a new Hospital resource.
      *
      * @return \Illuminate\Http\RedirectResponse
      */
@@ -32,18 +32,37 @@ class HospitalController extends Controller
         try {
             $data = $request->validated();
 
-            if($request->hasFile('logo')) {
-                $data['logo'] = $request->logo->store('hospital/logo', 'public');
-            }
+//            if($request->hasFile('logo')) {
+//                $data['logo'] = $request->logo->store('hospital/logo', 'public');
+//            }
+//            $data['logo'];
             $user = resolve(AuthService::class)->adminRegister($data['user']);
             unset($data['user']);
             $data['user_id'] = $user->id;
             $hospital = Hospital::create($data);
             DB::commit();
-            return redirect(url($hospital->slug.'/login'));
+            return redirect(url($hospital->domain.'/login'));
         } catch (\Exception $e) {
             DB::rollback();
-            return redirect()->back()->withErrors('Process Does Not Completed! Please Contact Our IT Department');
+            throw $e;
+            notify()->error("Process Does Not Completed! Please Contact Our IT Department");
+            return redirect()->back();
         }
+    }
+
+    public function checkDomain(Request $request)
+    {
+        if(!is_null($request->get('domain'))) {
+            $check = Hospital::query()
+                            ->where('domain',trim($request->get('domain')))
+                            ->exists();
+            if($check) {
+                return response()->json(['status' => false]);
+            }
+            return response()->json(['status' => true]);
+        }
+
+        return null;
+
     }
 }
