@@ -18,6 +18,9 @@
 </head>
 
 <body style="font-family: Samanata,fantasy !important;overflow:hidden;background: linear-gradient(90deg, lightcyan 0%, rgba(145, 240, 227, 1) 35%, cyan 100%);">
+    <div class="loader_bg">
+        <div class="loader"></div>
+    </div>
     <div class="box">
         <div></div>
         <div></div>
@@ -33,5 +36,12 @@
     @yield('content')
     @include('partials.scripts')
     @include('partials.toast')
+    <script>
+        (function ($) {
+            $(window).on('load',function () {
+                $('.loader_bg').fadeOut('slow')
+            })
+        })(jQuery);
+    </script>
 </body>
 </html>

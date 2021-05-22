@@ -26,7 +26,7 @@
     <div class="form-section">
         <div class="input-group mt-4">
             <div class="input-group-prepend">
-                <span class="input-group-text bg-cyan" id="basic-addon3">https://hms.com/</span>
+                <span class="input-group-text bg-cyan" id="basic-addon3">hms.com/</span>
             </div>
             <input style="border-left: 1px solid silver!important;" type="text"
                    placeholder="Domain"
@@ -77,17 +77,17 @@
     <div class="form-section">
         <input name="social[facebook]"
                type="text"
-               value="{{old('social[facebook]')}}"
+               value="{{old('social.facebook')}}"
                placeholder="Facebook"
                class="form-control mt-3 p-3 b-none b-color-cyan">
         <input name="social[instagram]"
                type="text"
-               value="{{old('social[instagram]')}}"
+               value="{{old('social.instagram')}}"
                class="form-control mt-3 p-3 b-none b-color-cyan"
                placeholder="Instagram">
         <input name="social[twitter]"
                type="text"
-               value="{{old('social[twitter]')}}"
+               value="{{old('social.twitter')}}"
                placeholder="Twitter"
                class="form-control mt-3 p-3 b-none b-color-cyan">
     </div>
@@ -97,12 +97,12 @@
                required
                type="text"
                placeholder="Name"
-               value="{{old('user.name]')}}"
+               value="{{old('user.name')}}"
                class="form-control mt-3 p-3 b-none b-color-cyan">
         <input name="user[email]"
                required
                type="email"
-               value="{{old('user.email]')}}"
+               value="{{old('user.email')}}"
                class="form-control mt-3 p-3 b-none b-color-cyan"
                placeholder="Email">
         <input name="user[password]"
