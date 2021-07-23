@@ -1,0 +1,558 @@
+/*.b-color-pink:hover {*/
+/*    border: 3px solid;*/
+/*    border-color: deeppink;*/
+/*}*/
+
+.datepicker  {
+    color: darkcyan !important;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+.form-control {
+    border-radius: 8px !important;
+}
+.bg-cyan {
+    background: darkcyan !important;
+    color: white !important;
+}
+.b-none {
+    border: none !important;
+    border-bottom: silver 1px solid !important;
+}
+.b-color-pink:focus {
+    border: 3px solid !important;
+    border-color: deeppink !important;
+}
+
+.b-color-cyan:focus {
+    border: none;
+    border-bottom: 2px solid !important;
+    border-color: darkcyan !important;
+}
+
+.f-cyan:focus {
+    border: 2px solid !important;
+    border-color: darkcyan !important;
+}
+
+.btn-pink {
+    background-color: deeppink !important;
+    border-radius: 16px !important;
+    color: white !important;
+    width: 80px !important;
+}
+.btn-pink:hover {
+    border: 1px deeppink !important;
+    border-style: solid;
+    color: deeppink !important;
+    background-color: white !important;
+}
+.btn-grey {
+    background-color: grey !important;
+    border-radius: 16px !important;
+    color: white !important;
+    width: 100px !important;
+}
+.btn-grey:hover {
+    border: 1px solid grey !important;
+    color: grey !important;
+    background-color: white !important;
+}
+
+.btn-blue {
+    background-color: dodgerblue !important;
+    border-radius: 16px !important;
+    color: white !important;
+    width: 100px !important;
+}
+.btn-blue:hover {
+    border: 1px solid dodgerblue !important;
+    color: dodgerblue !important;
+    background-color: white !important;
+}
+
+.btn-cyan {
+    background-color: #36bdc2 !important;
+    border-radius: 16px !important;
+    color: white !important;
+    width: 100px !important;
+}
+.btn-cyan:hover {
+    border: 1px solid #36bdc2 !important;
+    color: #36bdc2 !important;
+    background-color: white !important;
+}
+
+.status-valid, .status-invalid, .status-check {
+    display: none;
+}
+.status-valid.current, .status-invalid.current, .status-check.current{
+    display: inherit;
+}
+/**
+multi step form setting
+ */
+.form-section {
+    display: none;
+}
+.form-section.current {
+    display: inherit;
+}
+.parsley-errors-list {
+    margin: 2px 0 3px;
+    padding: 0;
+    list-style-type: none;
+    color: red;
+}
+/****/
+@media only screen and (max-width: 600px) {
+    .left-side {
+        display: none;
+    }
+    .reset-img img{
+        height: 350px;
+        width: 350px;
+    }
+    .reset {
+        height:100px !important;
+        max-height: 200px !important;
+        margin-top: 0 !important;
+    }
+    .hospital-title {
+        font-size: 15px;
+    }
+    .login-logo h6 {
+        margin-left: 40px;
+        font-size: 10px;
+    }
+    .login-logo img {
+        position: absolute;
+        height: 40px !important;
+        width: 60px !important;
+        top: 35px !important;
+        overflow: hidden;
+        left: 50px !important;
+        background: transparent;
+    }
+}
+.login {
+    margin-top: 100px;
+    padding: 15px;
+}
+
+.reset {
+    margin-top: 250px;
+    padding: 15px;
+}
+.login-box {
+    width: 100%;
+}
+.login-image {
+    width:100%;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden
+}
+
+.login-image img{
+    flex-shrink:0;
+    -webkit-flex-shrink: 0;
+    max-width:107%;
+
+}
+
+.login-input {
+    margin-top: 40px;
+    width: 100%;
+}
+.login-input input {
+    border: none;
+    border-bottom: 2px solid silver;
+}
+
+.login-input .underline {
+    position: absolute;
+    height: 2px;
+    width: 84%;
+    bottom: 209px;
+}
+.login-input .underline-2 {
+    position: absolute;
+    height: 2px;
+    width: 84%;
+    bottom: 127px;
+}
+
+.login-input .underline-3 {
+    position: absolute;
+    height: 2px;
+    width: 84%;
+    bottom: 165px;
+}
+
+.login-input .underline-4 {
+    position: absolute;
+    height: 2px;
+    width: 84%;
+    bottom: 216px;
+}
+
+.login-input .underline-5 {
+    position: absolute;
+    height: 2px;
+    width: 84%;
+    bottom: 134px;
+}
+
+.login-input .underline:before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 100%;
+    background: darkcyan;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.login-input .underline-2:before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 100%;
+    background: darkcyan;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.login-input .underline-3:before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 100%;
+    background: darkcyan;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.login-input .underline-4:before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 100%;
+    background: darkcyan;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.login-input .underline-5:before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 100%;
+    background: darkcyan;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.login-input input:focus ~ .underline:before,
+.login-input input:valid ~ .underline:before{
+    transform: scaleX(1);
+}
+
+.login-input input:focus ~ .underline-2:before,
+.login-input input:valid ~ .underline-2:before{
+    transform: scaleX(1);
+}
+
+.login-input input:focus ~ .underline-3:before,
+.login-input input:valid ~ .underline-3:before{
+    transform: scaleX(1);
+}
+
+.login-input input:focus ~ .underline-4:before,
+.login-input input:valid ~ .underline-4:before{
+    transform: scaleX(1);
+}
+
+.login-input input:focus ~ .underline-5:before,
+.login-input input:valid ~ .underline-5:before{
+    transform: scaleX(1);
+}
+
+
+.login-input .label-1 {
+    position: absolute;
+    bottom: 210px;
+    pointer-events: none;
+    color: grey;
+    transition: all 0.5s ease;
+}
+.login-input .label-2 {
+    position: absolute;
+    bottom: 130px;
+    pointer-events: none;
+    color: grey;
+    transition: all 0.5s ease;
+}
+
+.login-input .label-3 {
+    position: absolute;
+    bottom: 160px;
+    pointer-events: none;
+    color: grey;
+    transition: all 0.5s ease;
+}
+
+.login-input .label-4 {
+    position: absolute;
+    bottom: 213px;
+    pointer-events: none;
+    color: grey;
+    transition: all 0.5s ease;
+}
+
+.login-input .label-5 {
+    position: absolute;
+    bottom: 128px;
+    pointer-events: none;
+    color: grey;
+    transition: all 0.5s ease;
+}
+.login-input input:focus ~ .label-1,
+.login-input input:valid ~ .label-1{
+    transform: translateY(-30px);
+    color: darkcyan;
+}
+
+.login-input input:focus ~ .label-2,
+.login-input input:valid ~ .label-2{
+    transform: translateY(-30px);
+    color: darkcyan;
+}
+
+.login-input input:focus ~ .label-3,
+.login-input input:valid ~ .label-3{
+    transform: translateY(-30px);
+    color: darkcyan;
+}
+.login-input input:focus ~ .label-4,
+.login-input input:valid ~ .label-4{
+    transform: translateY(-30px);
+    color: darkcyan;
+}
+.login-input input:focus ~ .label-5,
+.login-input input:valid ~ .label-5{
+    transform: translateY(-30px);
+    color: darkcyan;
+}
+
+.login-logo img{
+    position: absolute;
+    height: 60px;
+    width: 80px;
+    overflow: hidden;
+    border-radius: 16px;
+    left: 130px;
+    top: 30px;
+    bottom: calc(50% - 40px);
+    background: transparent;
+}
+
+.login-form {
+    height:400px !important;
+    max-height: 500px !important;
+    border-radius: 16px !important;
+}
+.pass-reset-form {
+    height:300px !important;
+    max-height: 300px !important;
+    border-radius: 16px !important;
+}
+.reset-form {
+    height:350px !important;
+    max-height: 350px !important;
+    border-radius: 16px !important;
+}
+.theme-color {
+    background: linear-gradient(to right, #36bdc2 10%, #36bdc2 90%) !important;
+    color: white;
+}
+.login-button {
+    border-radius: 16px !important;
+    width: 100%;
+    height: 50px;
+    box-shadow: 0 2px 6px lightcyan;
+    background: linear-gradient(to right, #36bdc2 10%, #36bdc2 90%);
+    border-color: cyan;
+    color: white !important;
+    font-weight: bolder!important;
+    font-size: 12px !important;
+    line-height: 24px !important;
+    padding: .3rem .8rem;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    vertical-align: bottom;
+    border: 0;
+    display: inline-block;
+    transition: color .5s ease-in-out,
+                background .5s ease-in-out !important;
+}
+
+.login-button:hover {
+    background: lightcyan !important;
+    color: darkcyan !important;
+}
+
+/**
+background animation
+ */
+.box div {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background-color: transparent;
+    border: 6px solid white;
+}
+
+.box div:nth-child(1) {
+    top: 12%;
+    left: 42%;
+    animation: animate 10s linear infinite;
+}
+
+.box div:nth-child(2) {
+    top: 70%;
+    left: 50%;
+    animation: animate 7s linear infinite;
+}
+
+.box div:nth-child(3) {
+    top: 17%;
+    left: 6%;
+    animation: animate 9s linear infinite;
+}
+
+.box div:nth-child(4) {
+    top: 6%;
+    left: 63%;
+    animation: animate 10s linear infinite;
+}
+
+.box div:nth-child(5) {
+    top: 67%;
+    left: 10%;
+    animation: animate 6s linear infinite;
+}
+
+.box div:nth-child(6) {
+    top: 80%;
+    left: 70%;
+    animation: animate 12s linear infinite;
+}
+
+.box div:nth-child(7) {
+    top: 70%;
+    left: 90%;
+    animation: animate 15s linear infinite;
+}
+
+.box div:nth-child(8) {
+    top: 32%;
+    left: 25%;
+    animation: animate 16s linear infinite;
+}
+
+.box div:nth-child(9) {
+    top: 90%;
+    left: 25%;
+    animation: animate 9s linear infinite;
+}
+
+.box div:nth-child(10) {
+    top: 20%;
+    left: 80%;
+    animation: animate 5s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        transform: scale(0) translateY(0) rotate(0);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1.3) translateY(-90px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.filepond--drop-label {
+    border-radius: 16px !important;
+    background-color: #ECF7E9;
+    /*height: auto!important;*/
+}
+
+/**
+loader
+ */
+
+.loader_bg {
+    position: fixed;
+    z-index: 999999;
+    background: whitesmoke;
+    width: 100%;
+    height: 100%;
+}
+
+.loader {
+    border: 0 solid transparent;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: calc(50vh - 75px);
+    left: calc(50vw - 75px);
+}
+
+.loader:before, .loader:after {
+    content: '';
+    border: 1em solid #36bdc2;
+    border-radius: 50%;
+    height: inherit;
+    width: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: loader 2s linear infinite;
+    opacity: 0;
+}
+
+.loader:before {
+    animation-delay: 0.5s;
+}
+
+@keyframes loader {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+
+
+/**
+end-loader
+ */
+
+
